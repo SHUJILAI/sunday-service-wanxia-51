@@ -1,0 +1,889 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>SZSS × 湾夏艺术中心 · 5.1 快闪 · 宣发文案库</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&family=Noto+Serif+SC:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --blue-deep:#0a1428;
+    --blue-800:#0f1d38;
+    --blue-700:#152849;
+    --line:rgba(255,255,255,.08);
+    --line-soft:rgba(255,255,255,.05);
+    --white:#f5f5f5;
+    --off-white:#d8dce6;
+    --muted:#7e8a9e;
+    --ss-accent:#8ab8ff;
+    --wx-accent:#ffc98a;
+    --copy-bg:rgba(255,255,255,.025);
+    --copy-border:rgba(255,255,255,.06);
+    --red:#ff8a8a;
+    --green:#8aff9f;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--blue-deep);color:var(--white);font-family:'Inter','Noto Serif SC',-apple-system,BlinkMacSystemFont,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.5;}
+  body{position:relative;overflow-x:hidden;padding-bottom:120px;}
+  body::before{
+    content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+    background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence baseFrequency='.82' numOctaves='2' seed='11'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .05 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+    opacity:.32;mix-blend-mode:overlay;
+  }
+  body::after{
+    content:'';position:fixed;top:-20%;right:-10%;width:60%;height:50%;z-index:0;
+    background:radial-gradient(circle, rgba(138,184,255,.08) 0%, transparent 70%);
+    pointer-events:none;
+  }
+  .wrap{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:0 40px;}
+
+  /* -------- COVER -------- */
+  .cover{padding:140px 0 100px;border-bottom:1px solid var(--line);}
+  .cover-top{font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--muted);margin-bottom:56px;display:flex;align-items:center;gap:14px;}
+  .cover-top::after{content:'';flex:1;height:1px;background:var(--line);max-width:340px;}
+  .cover h1{font-family:'Noto Serif SC',serif;font-weight:500;font-size:clamp(48px,7.5vw,104px);line-height:1;letter-spacing:-.015em;margin-bottom:36px;}
+  .cover h1 em{font-style:normal;color:var(--ss-accent);font-weight:400;}
+  .cover h1 i{font-style:normal;color:var(--wx-accent);font-weight:400;}
+  .cover-sub{font-family:'Noto Serif SC',serif;font-weight:300;font-size:20px;color:var(--off-white);line-height:1.75;max-width:680px;margin-bottom:52px;}
+  .cover-meta{display:flex;gap:56px;flex-wrap:wrap;font-family:'Inter';font-size:12px;color:var(--muted);letter-spacing:.14em;text-transform:uppercase;padding-bottom:32px;border-bottom:1px solid var(--line);margin-bottom:32px;}
+  .cover-meta b{color:var(--white);font-weight:500;display:block;font-size:22px;font-family:'Noto Serif SC',serif;margin-bottom:4px;text-transform:none;letter-spacing:0;}
+  .cover-pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:0;}
+  .pillar{padding:18px 24px 6px 0;border-right:1px solid var(--line-soft);}
+  .pillar:last-child{border-right:none;}
+  .pillar-label{font-family:'Inter';font-size:10px;letter-spacing:.26em;color:var(--muted);margin-bottom:10px;text-transform:uppercase;}
+  .pillar-v{font-family:'Noto Serif SC',serif;font-size:22px;color:var(--white);font-weight:500;letter-spacing:.02em;}
+
+  /* -------- SECTION BASE -------- */
+  section.block{padding:96px 0;border-bottom:1px solid var(--line);}
+  .eyebrow{font-family:'Inter';font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--muted);margin-bottom:18px;display:inline-flex;align-items:center;gap:12px;}
+  .eyebrow::before{content:'';width:28px;height:1px;background:var(--muted);}
+  .s-title{font-family:'Noto Serif SC',serif;font-weight:500;font-size:42px;line-height:1.15;margin-bottom:10px;letter-spacing:-.008em;}
+  .s-sub{font-family:'Inter','Noto Serif SC',sans-serif;font-size:14px;color:var(--muted);margin-bottom:52px;letter-spacing:.02em;line-height:1.7;}
+
+  /* -------- CORE NARRATIVE -------- */
+  .pillars-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);}
+  .pillar-card{padding:36px 28px;background:var(--blue-deep);}
+  .pc-i{font-family:'Inter';font-size:10px;letter-spacing:.28em;color:var(--muted);margin-bottom:18px;}
+  .pc-t{font-family:'Noto Serif SC',serif;font-size:22px;font-weight:500;margin-bottom:16px;letter-spacing:-.005em;line-height:1.3;}
+  .pc-d{font-size:13px;color:var(--off-white);line-height:1.75;}
+  .pc-d b{color:var(--white);font-weight:500;}
+  .pc-d .heat{margin-top:12px;padding-top:12px;border-top:1px dashed var(--line-soft);color:var(--wx-accent);font-size:12px;}
+
+  /* -------- PROTOCOL -------- */
+  .rules{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);}
+  .rule{padding:32px 26px;background:var(--blue-deep);}
+  .rule-n{font-family:'Inter';font-size:36px;font-weight:200;color:var(--muted);margin-bottom:14px;letter-spacing:-.02em;}
+  .rule-t{font-family:'Noto Serif SC',serif;font-size:16px;font-weight:500;color:var(--white);margin-bottom:10px;line-height:1.5;}
+  .rule-d{font-size:13px;color:var(--off-white);line-height:1.75;}
+  .rule-d code{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--ss-accent);background:rgba(138,184,255,.06);padding:1px 6px;border-radius:2px;}
+
+  /* -------- HASHTAG POOL -------- */
+  .tag-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .tag-card{padding:28px 26px;background:var(--blue-800);border:1px solid var(--line);border-radius:2px;}
+  .tag-card .bar{height:2px;width:32px;background:var(--white);margin-bottom:18px;}
+  .tag-card.ss .bar{background:var(--ss-accent);}
+  .tag-card.wx .bar{background:var(--wx-accent);}
+  .tag-label{font-family:'Inter';font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;}
+  .tag-role{font-family:'Noto Serif SC',serif;font-size:18px;font-weight:500;margin-bottom:18px;}
+  .tag-list{display:flex;flex-wrap:wrap;gap:7px;}
+  .tag-pill{display:inline-block;padding:6px 11px;background:rgba(255,255,255,.035);border:1px solid var(--line);border-radius:999px;font-size:12px;color:var(--off-white);font-family:'Inter','Noto Serif SC',sans-serif;}
+  .tag-pill.must{background:rgba(138,184,255,.09);border-color:rgba(138,184,255,.32);color:var(--ss-accent);}
+  .tag-pill.wx-must{background:rgba(255,201,138,.09);border-color:rgba(255,201,138,.32);color:var(--wx-accent);}
+  .tag-pill.heat{background:rgba(255,201,138,.06);border-color:rgba(255,201,138,.22);color:var(--wx-accent);}
+
+  /* -------- TEAM CAST -------- */
+  .team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);}
+  .team-card{padding:36px 28px;background:var(--blue-deep);}
+  .team-role{font-family:'Inter';font-size:10px;letter-spacing:.26em;color:var(--muted);text-transform:uppercase;margin-bottom:16px;}
+  .team-name{font-family:'Noto Serif SC',serif;font-size:28px;font-weight:500;margin-bottom:12px;letter-spacing:-.01em;}
+  .team-tag{font-size:13px;color:var(--off-white);line-height:1.75;}
+
+  /* -------- DAY BLOCKS -------- */
+  .day{margin-bottom:84px;}
+  .day:last-child{margin-bottom:0;}
+  .day-head{display:flex;align-items:flex-end;gap:28px;padding-bottom:24px;border-bottom:1px solid var(--line);margin-bottom:36px;flex-wrap:wrap;}
+  .day-date{font-family:'Inter';font-size:64px;font-weight:200;letter-spacing:-.025em;line-height:.9;color:var(--white);}
+  .day-meta{display:flex;flex-direction:column;gap:4px;}
+  .day-tag{font-family:'Inter';font-size:10px;letter-spacing:.3em;color:var(--muted);text-transform:uppercase;}
+  .day-title{font-family:'Noto Serif SC',serif;font-size:22px;font-weight:500;color:var(--white);letter-spacing:-.005em;}
+  .day-asset{font-size:12px;color:var(--muted);margin-left:auto;font-family:'Inter','Noto Serif SC',sans-serif;line-height:1.6;}
+
+  .day-split{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+  .party-col{padding:0;}
+  .party-head{display:flex;align-items:center;gap:10px;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid var(--line-soft);}
+  .party-chip{display:inline-block;padding:3px 10px;font-family:'Inter';font-size:10px;letter-spacing:.22em;text-transform:uppercase;border-radius:2px;font-weight:500;}
+  .party-chip.ss{background:rgba(138,184,255,.12);color:var(--ss-accent);}
+  .party-chip.wx{background:rgba(255,201,138,.12);color:var(--wx-accent);}
+  .party-name{font-family:'Noto Serif SC',serif;font-size:14px;color:var(--off-white);}
+
+  .copy-card{background:var(--copy-bg);border:1px solid var(--copy-border);border-radius:2px;padding:22px 24px;margin-bottom:14px;transition:background .2s;}
+  .copy-card:hover{background:rgba(255,255,255,.04);}
+  .copy-meta{display:flex;align-items:center;gap:10px;margin-bottom:14px;}
+  .pf{display:inline-block;padding:3px 9px;font-family:'Inter','Noto Serif SC',sans-serif;font-size:10px;letter-spacing:.1em;border-radius:2px;background:rgba(255,255,255,.05);color:var(--off-white);font-weight:500;}
+  .pf.xhs{background:rgba(255,90,90,.12);color:#ff9b9b;}
+  .pf.dy{background:rgba(255,255,255,.08);color:var(--white);}
+  .pf.gzh{background:rgba(138,255,138,.1);color:#a8e8a8;}
+  .pf.vx{background:rgba(138,184,255,.12);color:var(--ss-accent);}
+  .pf.bili{background:rgba(255,138,220,.1);color:#ff9bd1;}
+  .pf.pyq{background:rgba(255,201,138,.1);color:var(--wx-accent);}
+  .pf-note{font-family:'Inter','Noto Serif SC',sans-serif;font-size:11px;color:var(--muted);letter-spacing:.03em;}
+
+  .copy-title{font-family:'Noto Serif SC',serif;font-size:17px;font-weight:500;color:var(--white);margin-bottom:12px;line-height:1.5;letter-spacing:-.005em;}
+  .copy-body{font-family:'Noto Serif SC',serif;font-size:15px;line-height:1.95;color:#e0e4ec;white-space:pre-wrap;font-weight:300;}
+  .copy-body .em{color:var(--ss-accent);}
+  .copy-body .em-wx{color:var(--wx-accent);}
+  .copy-tags{margin-top:14px;padding-top:12px;border-top:1px dashed var(--line-soft);font-size:12px;color:var(--muted);font-family:'Inter','Noto Serif SC',sans-serif;letter-spacing:.02em;line-height:1.8;}
+
+  /* -------- SHOWTIME TIMELINE -------- */
+  .show-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);}
+  .show-card{padding:28px 24px;background:var(--blue-deep);}
+  .show-time{font-family:'Inter';font-size:36px;font-weight:200;margin-bottom:4px;letter-spacing:-.02em;color:var(--white);}
+  .show-what{font-family:'Noto Serif SC',serif;font-size:13px;color:var(--muted);margin-bottom:20px;letter-spacing:.02em;}
+  .show-line{font-size:13px;color:var(--off-white);line-height:1.75;padding-top:14px;border-top:1px solid var(--line-soft);font-family:'Noto Serif SC',sans-serif;font-weight:300;}
+  .show-line + .show-line{margin-top:12px;}
+  .show-line b{color:var(--ss-accent);font-weight:500;margin-right:6px;}
+  .show-line i{color:var(--wx-accent);font-weight:500;font-style:normal;margin-right:6px;}
+
+  /* -------- DO / DON'T -------- */
+  .dd{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+  .dd-col{padding:32px 28px;border:1px solid var(--line);border-radius:2px;background:var(--blue-800);}
+  .dd-col.do{border-top:2px solid var(--green);}
+  .dd-col.dont{border-top:2px solid var(--red);}
+  .dd-head{font-family:'Inter';font-size:11px;letter-spacing:.3em;margin-bottom:20px;text-transform:uppercase;}
+  .dd-col.do .dd-head{color:var(--green);}
+  .dd-col.dont .dd-head{color:var(--red);}
+  .dd ul{list-style:none;}
+  .dd li{padding:12px 0;border-bottom:1px solid var(--line-soft);font-size:14px;line-height:1.65;color:var(--off-white);font-family:'Noto Serif SC',sans-serif;font-weight:300;}
+  .dd li:last-child{border-bottom:none;}
+  .dd li::before{content:attr(data-m);margin-right:12px;font-family:'Inter';font-size:12px;}
+  .dd-col.do li::before{color:var(--green);}
+  .dd-col.dont li::before{color:var(--red);}
+
+  /* -------- FOOTER -------- */
+  footer{padding:80px 0 0;text-align:center;}
+  footer .f-brand{font-family:'Noto Serif SC',serif;font-size:14px;color:var(--off-white);margin-bottom:8px;letter-spacing:.02em;}
+  footer .f-meta{font-size:11px;color:var(--muted);letter-spacing:.14em;text-transform:uppercase;}
+
+  @media (max-width:860px){
+    .wrap{padding:0 22px;}
+    .rules,.tag-grid,.team-grid,.show-grid,.day-split,.dd,.cover-pillars,.pillars-grid{grid-template-columns:1fr;}
+    .rules,.pillars-grid,.team-grid,.show-grid{gap:1px;}
+    .pillar{border-right:none;border-bottom:1px solid var(--line-soft);padding:16px 0;}
+    .pillar:last-child{border-bottom:none;}
+    .cover h1{font-size:46px;}
+    .cover-sub{font-size:17px;}
+    .s-title{font-size:30px;}
+    .day-head{gap:14px;}
+    .day-date{font-size:44px;}
+    .day-asset{margin-left:0;width:100%;}
+    section.block{padding:64px 0;}
+    .cover-meta{gap:28px;}
+    .cover-meta b{font-size:18px;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ COVER ============ -->
+<section class="cover">
+  <div class="wrap">
+    <div class="cover-top">SZSS <em style="color:var(--muted);font-style:normal;margin:0 8px;">×</em> 湾夏艺术中心 · 5.1 · COPY DECK</div>
+    <h1>宣发<br/><em>文案库</em></h1>
+    <div class="cover-sub">
+      4.27 启动，5 天每日一波。<br/>
+      所有文案都按平台调过，直接复制就能发。
+    </div>
+    <div class="cover-meta">
+      <span><b>5</b>天每日一波</span>
+      <span><b>2</b>方矩阵同步</span>
+      <span><b>6</b>平台覆盖</span>
+      <span><b>40+</b>条文案模板</span>
+    </div>
+    <div class="cover-pillars">
+      <div class="pillar"><div class="pillar-label">01</div><div class="pillar-v">音乐现场</div></div>
+      <div class="pillar"><div class="pillar-label">02</div><div class="pillar-v">合唱</div></div>
+      <div class="pillar"><div class="pillar-label">03</div><div class="pillar-v">团队</div></div>
+      <div class="pillar"><div class="pillar-label">04</div><div class="pillar-v">演出地点</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROTOCOL ============ -->
+<section class="block">
+  <div class="wrap">
+    <div class="eyebrow">PROTOCOL</div>
+    <h2 class="s-title">发布铁律</h2>
+    <div class="s-sub">四条 · 发布前过一遍 · 触红线直接撤稿</div>
+    <div class="rules">
+      <div class="rule">
+        <div class="rule-n">01</div>
+        <div class="rule-t">双 @ 不能少</div>
+        <div class="rule-d">SS 侧 @ <code>湾夏艺术中心</code>；湾夏侧 @ <code>Sunday Service Shenzhen</code> / <code>ConnieGOUP</code>。</div>
+      </div>
+      <div class="rule">
+        <div class="rule-n">02</div>
+        <div class="rule-t">双 LOGO 同框</div>
+        <div class="rule-d">主视觉、海报、视频片头、现场背板，两个 LOGO 都必须同框，尺寸 1:1。</div>
+      </div>
+      <div class="rule">
+        <div class="rule-n">03</div>
+        <div class="rule-t">主话题必带</div>
+        <div class="rule-d"><code>#深圳SundayService</code> <code>#湾夏艺术中心</code> 双方必带，其余按平台补充。</div>
+      </div>
+      <div class="rule">
+        <div class="rule-n">04</div>
+        <div class="rule-t">24h 过稿</div>
+        <div class="rule-d">对外稿件发布前 24h 双方过稿；同一张现场图不两家都发。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CORE NARRATIVE ============ -->
+<section class="block">
+  <div class="wrap">
+    <div class="eyebrow">NARRATIVE</div>
+    <h2 class="s-title">核心叙事</h2>
+    <div class="s-sub">所有文案围绕这四条 · 不谈人数 · 不做宗教</div>
+
+    <div class="pillars-grid">
+      <div class="pillar-card">
+        <div class="pc-i">01</div>
+        <div class="pc-t">一场深圳<br/>音乐现场</div>
+        <div class="pc-d">关键词：现场、负一楼、30 分钟、免费。<br/>提"演出"时说"音乐现场"或"合唱现场"。</div>
+      </div>
+      <div class="pillar-card">
+        <div class="pc-i">02</div>
+        <div class="pc-t">合唱</div>
+        <div class="pc-d">关键词：合唱团、和声、5 首歌、一气呵成。<br/>强调"一群人一起唱"这件事本身，不报具体人数。</div>
+      </div>
+      <div class="pillar-card">
+        <div class="pc-i">03</div>
+        <div class="pc-t">一支深圳本地<br/>音乐团队</div>
+        <div class="pc-d">指挥 <b>Mia</b>、和声 <b>周学仪</b>、乐队 4 人、合唱团来自深圳各行各业。<br/><b>团队是主角</b>。</div>
+      </div>
+      <div class="pillar-card">
+        <div class="pc-i">04</div>
+        <div class="pc-t">一个被打开的<br/>负一楼</div>
+        <div class="pc-d">关键词：<b>湾厦 1012 · 负一楼</b>、下沉空间、深圳青年音乐现场地标。<br/>湾夏侧以空间为主视角。<div class="heat">热度 hook：Sunday Service 深圳第一场 · Kanye 同款形式 · 不说"致敬"不说"翻版"</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HASHTAG POOL ============ -->
+<section class="block">
+  <div class="wrap">
+    <div class="eyebrow">HASHTAG</div>
+    <h2 class="s-title">话题池</h2>
+    <div class="s-sub">主话题必带 · 平台补充按需加 · 不要硬塞</div>
+
+    <div class="tag-grid">
+      <div class="tag-card">
+        <div class="bar"></div>
+        <div class="tag-label">MUST-HAVE · 双方必带</div>
+        <div class="tag-role">主话题</div>
+        <div class="tag-list">
+          <span class="tag-pill must">#深圳SundayService</span>
+          <span class="tag-pill wx-must">#湾夏艺术中心</span>
+          <span class="tag-pill">#SundayServiceShenzhen</span>
+          <span class="tag-pill">#深圳音乐现场</span>
+          <span class="tag-pill heat">#KanyeWest</span>
+        </div>
+      </div>
+      <div class="tag-card ss">
+        <div class="bar"></div>
+        <div class="tag-label">PLATFORM · 小红书</div>
+        <div class="tag-role">XHS 补充池</div>
+        <div class="tag-list">
+          <span class="tag-pill">#五一去哪儿</span>
+          <span class="tag-pill">#深圳宝藏</span>
+          <span class="tag-pill">#深圳周末去哪</span>
+          <span class="tag-pill">#深圳艺术空间</span>
+          <span class="tag-pill">#深圳宝安</span>
+          <span class="tag-pill">#合唱</span>
+          <span class="tag-pill">#现场音乐</span>
+          <span class="tag-pill">#深圳live</span>
+        </div>
+      </div>
+      <div class="tag-card wx">
+        <div class="bar"></div>
+        <div class="tag-label">PLATFORM · 抖音 / B站</div>
+        <div class="tag-role">DY · B站 补充池</div>
+        <div class="tag-list">
+          <span class="tag-pill">#合唱现场</span>
+          <span class="tag-pill">#深圳音乐</span>
+          <span class="tag-pill">#五一</span>
+          <span class="tag-pill">#现场音乐</span>
+          <span class="tag-pill">#乐队现场</span>
+          <span class="tag-pill">#深圳</span>
+          <span class="tag-pill heat">#KanyeWest</span>
+          <span class="tag-pill heat">#SundayService</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TEAM CAST ============ -->
+<section class="block">
+  <div class="wrap">
+    <div class="eyebrow">TEAM</div>
+    <h2 class="s-title">团队口径</h2>
+    <div class="s-sub">所有物料提到团队时，统一用这个</div>
+
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-role">CONDUCTOR · 指挥</div>
+        <div class="team-name">Mia</div>
+        <div class="team-tag">合唱总指挥 · 全场节奏掌控 · 镜头主角</div>
+      </div>
+      <div class="team-card">
+        <div class="team-role">VOCAL · 和声</div>
+        <div class="team-name">周学仪</div>
+        <div class="team-tag">和声编写 · 合唱训练 · 女主唱</div>
+      </div>
+      <div class="team-card">
+        <div class="team-role">BAND · 乐队</div>
+        <div class="team-name">现场乐队</div>
+        <div class="team-tag">4 人 · 鼓 · 贝斯 · 键盘 · 吉他 · 全现场</div>
+      </div>
+      <div class="team-card">
+        <div class="team-role">CHOIR · 合唱</div>
+        <div class="team-name">合唱团</div>
+        <div class="team-tag">老师、上班族、学生、歌手，来自深圳各行各业</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5 DAYS ============ -->
+<section class="block">
+  <div class="wrap">
+    <div class="eyebrow">5 DAYS · 5 WAVES</div>
+    <h2 class="s-title">5 天文案</h2>
+    <div class="s-sub">4.27 → 5.1 · 每天一波 · SS × 湾夏同步</div>
+
+    <!-- ========== DAY 1 · 4.27 · 官宣 ========== -->
+    <div class="day">
+      <div class="day-head">
+        <div class="day-date">4.27</div>
+        <div class="day-meta">
+          <div class="day-tag">DAY 1 · SUN</div>
+          <div class="day-title">官宣 · 联名主视觉</div>
+        </div>
+        <div class="day-asset">联名海报 · 双 LOGO · 信息卡</div>
+      </div>
+
+      <div class="day-split">
+        <div class="party-col">
+          <div class="party-head"><span class="party-chip ss">SS</span><span class="party-name">Sunday Service Shenzhen</span></div>
+
+          <div class="copy-card">
+            <div class="copy-meta"><span class="pf xhs">小红书</span><span class="pf-note">九宫格主视觉</span></div>
+            <div class="copy-title">Sunday Service 要在深圳做一场了</div>
+<div class="copy-body">5.1 · 晚上 7 点 · 湾厦 1012 · 负一楼。
+合唱团 + 现场乐队 · 30 分钟 · 不停。
+免费 · 来就行。
+
+📍湾厦 1012 · 负一楼
+🕖 5.1 · 19:00
+🎟️ 主页预约 · 300 席</div>
+            <div class="copy-tags">#深圳SundayService #湾夏艺术中心 #深圳音乐现场 #KanyeWest #五一去哪儿 #合唱</div>
+          </div>
+
+          <div class="copy-card">
+            <div class="copy-meta"><span class="pf dy">抖音</span><span class="pf-note">15s · 钩子先行</span></div>
+            <div class="copy-title">钩子 · "Sunday Service · 在深圳。"</div>
+<div class="copy-body">5.1 · 晚 7 点 · 湾厦 1012 负一楼。
+合唱 + 乐队 · 免费。
+@湾夏艺术中心</div>
+            <div class="copy-tags">#深圳SundayService #KanyeWest #SundayService #合唱现场 #深圳</div>
+          </div>
+
+          <div class="copy-card">
+            <div class="copy-meta"><span class="pf vx">视频号</span><span class="pf-note">15–30s</span></div>
+<div class="copy-body">5.1 · 晚 7 点 · Sunday Service 在深圳的第一场。
+湾厦 1012 · 负一楼 · 免费。@湾夏艺术中心</div>
+          </div>
+
+          <div class="copy-card">
+            <div class="copy-meta"><span class="pf pyq">朋友圈</span><span class="pf-note">主创 / 团员发起</span></div>
+<div class="copy-body">5.1 · 湾厦负一楼 · 做一场合唱。
+来吧。</div>
+          </div>
+        </div>
+
+        <div class="party-col">
+          <div class="party-head"><span class="party-chip wx">湾夏</span><span class="party-name">湾夏艺术中心</span></div>
+
+          <div class="copy-card">
+            <div class="copy-meta"><span class="pf gzh">公众号</span><span class="pf-note">主稿 · 官宣推文</span></div>
+            <div class="copy-title">5.1 · 湾厦 1012 要发生一场合唱</div>
+<div class="copy-body"><span class="em">Sunday Service Shenzhen</span> 要在这里做首场。
+负一楼 · 19:00 · 30 分钟 · 合唱 + 乐队 · 免费。
+
+他们是一支深圳本地的音乐团队，这是他们第一次。
+也是我们第一次，把整个负一楼交出去。
+
+路线、预约，在文末。</div>
+          </div>
+
+          <div class="copy-card">
+            <div class="copy-meta"><span class="pf xhs">小红书</span><span class="pf-note">主视觉 + 空间图</span></div>
+            <div class="copy-title">湾厦 1012 × Sunday Service · 5.1</div>
+<div class="copy-body">整个负一楼，交给一场合唱。
+5.1 · 19:00 · 30 分钟 · 免费。
+@Sunday Service Shenzhen</div>
+            <div class="copy-tags">#湾夏艺术中心 #深圳SundayService #深圳周末去哪 #深圳艺术空间</div>
+          </div>
+
+          <div class="copy-card">
+            <div class="copy-meta"><span class="pf vx">视频号</span><span class="pf-note">同步官方号</span></div>
+<div class="copy-body">5.1 · 晚 7 点 · 湾厦 1012 · 一场合唱 · 免费。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== DAY 2 · 4.28 · 排练 ========== -->
+    <div class="day">
+      <div class="day-head">
+        <div class="day-date">4.28</div>
+        <div class="day-meta">
+          <div class="day-tag">DAY 2 · MON</div>
+          <div class="day-title">排练花絮 · 60s</div>
+        </div>
+        <div class="day-asset">60s 排练视频 · 拍摄 by BAB</div>
+      </div>
+
+      <div class="day-split">
+        <div class="party-col">
+          <div class="party-head"><span class="party-chip ss">SS</span><span class="party-name">Sunday Service Shenzhen</span></div>
+
+          <div class="copy-card">
+            <div class="copy-meta"><span class="pf xhs">小红书</span><span class="pf-note">60s 排练视频</span></div>
+            <div class="copy-title">排练 · 60 秒</div>
+<div class="copy-body">距 5.1 还有 3 天。
+昨晚在湾厦 1012 排完的 · 60 秒给你看。
+指挥 Mia 想让所有声音扎在一起。
+
+📍湾厦 1012 · 5.1 · 19:00
+🎟️ 主页预约</div>
+            <div class="copy-tags">#深圳SundayService #湾夏艺术中心 #合唱 #排练日常 #现场音乐</div>
+          </div>
+
+          <div class="copy-card">
+            <div class="copy-meta"><span class="pf dy">抖音</span><span class="pf-note">60s · 高潮片段开场</span></div>
+            <div class="copy-title">钩子 · "合唱 + 乐队一起响的那一下。"</div>
+<div class="copy-body">3 天后 · 湾厦 1012 · 19:00 · 免费。</div>
+            <div class="copy-tags">#深圳SundayService #KanyeWest #合唱现场 #深圳音乐</div>
+          </div>
+
+          <div class="copy-card">
+            <div class="copy-meta"><span class="pf bili">B站</span><span class="pf-note">长版 90s · 排练纪录</span></div>
+            <div class="copy-title">深圳 Sunday Service 排练 · 距 5.1 还有 3 天</div>
+<div class="copy-body">90 秒记录 · 合唱 + 乐队。
+指挥 Mia · 和声 周学仪 · 乐队 4 人。
+5.1 · 19:00 · 湾厦 1012 · 免费。
+到场吃现场 · 不到场的一键三连。</div>
+          </div>
+        </div>
+
+        <div class="party-col">
+          <div class="party-head"><span class="party-chip wx">湾夏</span><span class="party-name">湾夏艺术中心</span></div>
+
+          <div class="copy-card">
+            <div class="copy-meta"><span class="pf gzh">公众号</span><span class="pf-note">排练花絮首发</span></div>
+            <div class="copy-title">倒计时 3 天 · 负一楼昨晚两点才关灯</div>
+<div class="copy-body">合唱、乐队 · 全在排。
+60 秒现场 · 先放一点给你看。
+
+5.1 · 19:00 · 现场见。
+@Sunday Service Shenzhen</div>
+          </div>
+
+          <div class="copy-card">
+            <div class="copy-meta"><span class="pf xhs">小红书</span><span class="pf-note">视频 + 1 张氛围图</span></div>
+<div class="copy-body">周一晚的湾厦 1012。
+排练到很晚。
+5.1 · 19:00 · 来听现场。</div>
+            <div class="copy-tags">#湾夏艺术中心 #深圳SundayService #深圳艺术空间 #合唱</div>
+          </div>
+
+          <div class="copy-card">
+            <div class="copy-meta"><span class="pf vx">视频号</span><span class="pf-note">60s 排练花絮同步</span></div>
+<div class="copy-body">昨晚湾厦 1012 的样子 · 3 天后见。
+@Sunday Service Shenzhen</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== DAY 3 · 4.29 · 团队 ========== -->
+    <div class="day">
+      <div class="day-head">
+        <div class="day-date">4.29</div>
+        <div class="day-meta">
+          <div class="day-tag">DAY 3 · TUE</div>
+          <div class="day-title">团队 · 指挥 · 和声 · 乐队 · 合唱团</div>
+        </div>
+        <div class="day-asset">九宫格团队图 · 30s 人物混剪</div>
+      </div>
+
+      <div class="day-split">
+        <div class="party-col">
+          <div class="party-head"><span class="party-chip ss">SS</span><span class="party-name">Sunday Service Shenzhen</span></div>
+
+          <div class="copy-card">
+            <div class="copy-meta"><span class="pf xhs">小红书</span><span class="pf-note">九宫格人物卡</span></div>
+            <div class="copy-title">5.1 · 站在负一楼的这群人</div>
+<div class="copy-body">指挥 · Mia
+和声 · 周学仪
+乐队 · 4 人
+合唱团 · 来自深圳各行各业
+
+音乐老师、程序员、上班族、学生 ——
+5.1 晚，他们全在湾厦 1012 的负一楼。</div>
+            <div class="copy-tags">#深圳SundayService #合唱团 #湾夏艺术中心 #人物故事</div>
+          </div>
+
+          <div class="copy-card">
+            <div class="copy-meta"><span class="pf vx">视频号</span><span class="pf-note">30s 人物混剪</span></div>
+            <div class="copy-title">5.1 · 这群人</div>
+<div class="copy-body">30 秒看完全员。
+湾厦 1012 · 5.1 · 19:00 · 免费。
+@湾夏艺术中心</div>
+          </div>
+
+          <div class="copy-card">
+            <div class="copy-meta"><span class="pf dy">抖音</span><span class="pf-note">30s 节奏强</span></div>
+            <div class="copy-title">钩子 · "深圳有这么一群人，5.1 要一起唱。"</div>
+<div class="copy-body">2 天后 · 湾厦 1012 · 免费。</div>
+            <div class="copy-tags">#深圳SundayService #合唱现场 #深圳音乐 #五一</div>
+          </div>
+        </div>
+
+        <div class="party-col">
+          <div class="party-head"><span class="party-chip wx">湾夏</span><span class="party-name">湾夏艺术中心</span></div>
+
+          <div class="copy-card">
+            <div class="copy-meta"><span class="pf gzh">公众号</span><span class="pf-note">人物小传 3 位</span></div>
+            <div class="copy-title">5.1 · 他们是谁</div>
+<div class="copy-body">不是舞台上的歌手。
+是深圳一支正在成形的音乐团队。
+
+指挥、和声、乐队、合唱团 ——
+三位成员的故事，在正文。
+
+5.1 · 19:00 · 湾厦 1012。
+@Sunday Service Shenzhen</div>
+          </div>
+
+          <div class="copy-card">
+            <div class="copy-meta"><span class="pf xhs">小红书</span><span class="pf-note">空间视角长图</span></div>
+<div class="copy-body">这群人 · 5.1 · 湾厦 1012。
+没有舞台 —— 整个负一楼都是舞台。</div>
+            <div class="copy-tags">#湾夏艺术中心 #深圳SundayService #深圳艺术空间</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== DAY 4 · 4.30 · 场地剧透 ========== -->
+    <div class="day">
+      <div class="day-head">
+        <div class="day-date">4.30</div>
+        <div class="day-meta">
+          <div class="day-tag">DAY 4 · WED</div>
+          <div class="day-title">场地剧透 · 倒计时 1 天</div>
+        </div>
+        <div class="day-asset">场地大图 · 路线图 · 明日预告</div>
+      </div>
+
+      <div class="day-split">
+        <div class="party-col">
+          <div class="party-head"><span class="party-chip ss">SS</span><span class="party-name">Sunday Service Shenzhen</span></div>
+
+          <div class="copy-card">
+            <div class="copy-meta"><span class="pf xhs">小红书</span><span class="pf-note">九宫格 · 场地 + 预告</span></div>
+            <div class="copy-title">明天 · 19:00 · 负一楼等你</div>
+<div class="copy-body">东西都支好了。
+
+📍湾厦 1012 · 负一楼
+🕖 5.1 · 19:00 开唱
+🎟️ 最后批次 · 主页预约
+🎧 5 首歌 · 30 分钟 · 不停</div>
+            <div class="copy-tags">#深圳SundayService #湾夏艺术中心 #五一 #明天见</div>
+          </div>
+
+          <div class="copy-card">
+            <div class="copy-meta"><span class="pf dy">抖音</span><span class="pf-note">15s · 倒计时</span></div>
+            <div class="copy-title">钩子 · "明天 · 负一楼 · 19 点。"</div>
+<div class="copy-body">Sunday Service 深圳第一场。
+湾厦 1012 · 免费。</div>
+            <div class="copy-tags">#深圳SundayService #KanyeWest #合唱现场 #明天见</div>
+          </div>
+
+          <div class="copy-card">
+            <div class="copy-meta"><span class="pf pyq">朋友圈</span><span class="pf-note">团员、乐手、主创全量</span></div>
+<div class="copy-body">明天 7 点 · 湾厦 1012 · 来吧。</div>
+          </div>
+        </div>
+
+        <div class="party-col">
+          <div class="party-head"><span class="party-chip wx">湾夏</span><span class="party-name">湾夏艺术中心</span></div>
+
+          <div class="copy-card">
+            <div class="copy-meta"><span class="pf gzh">公众号</span><span class="pf-note">倒计时 + 入场须知</span></div>
+            <div class="copy-title">明天见 · 5.1 · 19:00</div>
+<div class="copy-body">合唱、乐队、30 分钟、免费。
+路线、入场、停车 · 都在正文。
+@Sunday Service Shenzhen</div>
+          </div>
+
+          <div class="copy-card">
+            <div class="copy-meta"><span class="pf xhs">小红书</span><span class="pf-note">场地九宫格</span></div>
+            <div class="copy-title">明天 · 19:00 · 负一楼</div>
+<div class="copy-body">明天的湾厦，不是平常的湾厦。
+都支好了。</div>
+            <div class="copy-tags">#湾夏艺术中心 #深圳SundayService #明天见</div>
+          </div>
+
+          <div class="copy-card">
+            <div class="copy-meta"><span class="pf vx">视频号</span><span class="pf-note">30s 场地预告</span></div>
+<div class="copy-body">明天 5.1 · 19:00 · 湾厦 1012 · 负一楼 · 免费。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== DAY 5 · 5.1 · 当天 ========== -->
+    <div class="day">
+      <div class="day-head">
+        <div class="day-date">5.1</div>
+        <div class="day-meta">
+          <div class="day-tag">DAY 5 · THU · SHOWTIME</div>
+          <div class="day-title">当天 · 预告 + 实时 + 快剪</div>
+        </div>
+        <div class="day-asset">实时图 · 15s 实况 · 21:00 首条快剪</div>
+      </div>
+
+      <div class="day-split">
+        <div class="party-col">
+          <div class="party-head"><span class="party-chip ss">SS</span><span class="party-name">Sunday Service Shenzhen</span></div>
+
+          <div class="copy-card">
+            <div class="copy-meta"><span class="pf xhs">小红书</span><span class="pf-note">10:00 · 当日预告</span></div>
+            <div class="copy-title">今晚 · 19:00 · 负一楼见</div>
+<div class="copy-body">Sunday Service 深圳第一场 · 今晚。
+
+📍湾厦 1012 · 负一楼
+🕖 19:00
+🎟️ 现场还有少量位 · 早点到</div>
+            <div class="copy-tags">#深圳SundayService #湾夏艺术中心 #五一 #今晚见</div>
+          </div>
+
+          <div class="copy-card">
+            <div class="copy-meta"><span class="pf dy">抖音</span><span class="pf-note">19:05 · 实时 15s</span></div>
+            <div class="copy-title">正在唱 · 湾厦 1012</div>
+<div class="copy-body">Sunday Service 深圳第一场 · 现场。
+@湾夏艺术中心</div>
+            <div class="copy-tags">#深圳SundayService #KanyeWest #合唱现场</div>
+          </div>
+
+          <div class="copy-card">
+            <div class="copy-meta"><span class="pf dy">抖音</span><span class="pf-note">21:00 · 首条快剪 60s</span></div>
+            <div class="copy-title">5.1 · 湾厦 1012 · 刚才</div>
+<div class="copy-body">合唱、乐队、30 分钟、没停。
+@湾夏艺术中心 · 谢谢给的这个负一楼。</div>
+            <div class="copy-tags">#深圳SundayService #KanyeWest #合唱现场 #五一 #现场音乐</div>
+          </div>
+
+          <div class="copy-card">
+            <div class="copy-meta"><span class="pf pyq">朋友圈</span><span class="pf-note">Connie 第一视角</span></div>
+<div class="copy-body">刚唱完。
+就是想要的那种。
+谢谢团队 · 谢谢湾夏 · 谢谢来的每一个你。</div>
+          </div>
+        </div>
+
+        <div class="party-col">
+          <div class="party-head"><span class="party-chip wx">湾夏</span><span class="party-name">湾夏艺术中心</span></div>
+
+          <div class="copy-card">
+            <div class="copy-meta"><span class="pf xhs">小红书</span><span class="pf-note">10:00 · 空间视角预告</span></div>
+<div class="copy-body">湾厦 1012 今晚长什么样 · 9 小时后见分晓。
+5.1 · 19:00 · Sunday Service · 免费。</div>
+            <div class="copy-tags">#湾夏艺术中心 #深圳SundayService #今晚见</div>
+          </div>
+
+          <div class="copy-card">
+            <div class="copy-meta"><span class="pf vx">视频号</span><span class="pf-note">19:05 · 空间视角</span></div>
+<div class="copy-body">正在唱 · 湾厦 1012。
+@Sunday Service Shenzhen</div>
+          </div>
+
+          <div class="copy-card">
+            <div class="copy-meta"><span class="pf vx">视频号</span><span class="pf-note">21:30 · 空间快剪版</span></div>
+            <div class="copy-title">今晚的湾厦 1012</div>
+<div class="copy-body">合唱、乐队、负一楼、30 分钟。
+@Sunday Service Shenzhen</div>
+          </div>
+
+          <div class="copy-card">
+            <div class="copy-meta"><span class="pf gzh">公众号</span><span class="pf-note">当晚速推</span></div>
+            <div class="copy-title">刚才 · 湾厦 1012</div>
+<div class="copy-body">19:00 到 19:30 · 负一楼满了。
+详细的 · 明天说。
+今晚 · 先给你这张。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ SHOWTIME ============ -->
+<section class="block">
+  <div class="wrap">
+    <div class="eyebrow">SHOWTIME</div>
+    <h2 class="s-title">当天实时模板</h2>
+    <div class="s-sub">5.1 当天实时发 · 复制即用 · 主 tag 固定不变</div>
+
+    <div class="show-grid">
+      <div class="show-card">
+        <div class="show-time">10:00</div>
+        <div class="show-what">当日预告</div>
+        <div class="show-line"><b>SS</b>今晚 19:00 · 湾厦 1012 · 见。</div>
+        <div class="show-line"><i>湾夏</i>湾厦 1012 今晚长什么样 · 9 小时后见分晓。</div>
+      </div>
+      <div class="show-card">
+        <div class="show-time">18:30</div>
+        <div class="show-what">观众入场</div>
+        <div class="show-line"><b>SS</b>负一楼 · 30 分钟后开唱 · 还有余席。</div>
+        <div class="show-line"><i>湾夏</i>湾厦 1012 负一楼 · 观众开始入场。</div>
+      </div>
+      <div class="show-card">
+        <div class="show-time">19:05</div>
+        <div class="show-what">演出进行</div>
+        <div class="show-line"><b>SS</b>正在唱 · 湾厦 1012 · 合唱现场。</div>
+        <div class="show-line"><i>湾夏</i>湾厦 1012 · 合唱现场 · 进行中。</div>
+      </div>
+      <div class="show-card">
+        <div class="show-time">21:00</div>
+        <div class="show-what">首条快剪</div>
+        <div class="show-line"><b>SS</b>抖音 + 视频号 · 60s 快剪 · "刚才"。</div>
+        <div class="show-line"><i>湾夏</i>视频号 + 小红书 · 空间视角 · 错位发。</div>
+      </div>
+    </div>
+
+    <p style="font-size:13px;color:var(--muted);margin-top:28px;text-align:center;font-family:'Noto Serif SC',sans-serif;line-height:1.7;">
+      铁律：实时图同一张不两家都发 —— SS 侧重表演和团队 · 湾夏侧重空间和氛围。
+    </p>
+  </div>
+</section>
+
+<!-- ============ POST ============ -->
+<section class="block">
+  <div class="wrap">
+    <div class="eyebrow">POST · 48H</div>
+    <h2 class="s-title">演出后复盘</h2>
+    <div class="s-sub">5.2 晨 · 数据 + 故事双稿齐发</div>
+
+    <div class="day-split">
+      <div class="party-col">
+        <div class="party-head"><span class="party-chip ss">SS</span><span class="party-name">Sunday Service Shenzhen</span></div>
+
+        <div class="copy-card">
+          <div class="copy-meta"><span class="pf xhs">小红书</span><span class="pf-note">九宫格精修 · 复盘长文</span></div>
+          <div class="copy-title">5.1 · 我们在湾厦唱完了</div>
+<div class="copy-body">5 首歌 · 30 分钟 · 300+ 现场。
+第一次 Sunday Service · 就这样过了。
+
+谢谢 @湾夏艺术中心。
+谢谢站上去的每一个人。
+谢谢来的每一个你。
+
+下次见 · 6.21 夏至。</div>
+          <div class="copy-tags">#深圳SundayService #湾夏艺术中心 #五一 #合唱 #深圳音乐现场</div>
+        </div>
+
+        <div class="copy-card">
+          <div class="copy-meta"><span class="pf dy">抖音 · B站</span><span class="pf-note">3–5 分钟完整版</span></div>
+          <div class="copy-title">5 min 完整版 · 深圳 Sunday Service × 湾厦 · 5.1</div>
+<div class="copy-body">指挥 Mia · 和声 周学仪 · 乐队 4 人。
+下次 · 6.21 夏至。</div>
+        </div>
+      </div>
+
+      <div class="party-col">
+        <div class="party-head"><span class="party-chip wx">湾夏</span><span class="party-name">湾夏艺术中心</span></div>
+
+        <div class="copy-card">
+          <div class="copy-meta"><span class="pf gzh">公众号</span><span class="pf-note">深度复盘 · 空间视角</span></div>
+          <div class="copy-title">那 30 分钟 · 湾厦 1012</div>
+<div class="copy-body">我们把整个负一楼交了出去。
+给一支深圳本地的音乐团队。
+结果长这样。
+
+@Sunday Service Shenzhen</div>
+        </div>
+
+        <div class="copy-card">
+          <div class="copy-meta"><span class="pf xhs">小红书</span><span class="pf-note">空间视角长图</span></div>
+          <div class="copy-title">那一晚 · 湾厦 1012</div>
+<div class="copy-body">合唱、乐队、负一楼、30 分钟。
+谢谢来的每一个人。</div>
+          <div class="copy-tags">#湾夏艺术中心 #深圳SundayService #深圳艺术空间</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DO / DON'T ============ -->
+<section class="block">
+  <div class="wrap">
+    <div class="eyebrow">CHECKLIST</div>
+    <h2 class="s-title">DO / DON'T</h2>
+    <div class="s-sub">发布前 60 秒自检 · 触红线直接撤稿</div>
+
+    <div class="dd">
+      <div class="dd-col do">
+        <div class="dd-head">DO · 必须做</div>
+        <ul>
+          <li data-m="✓">主话题必带：<code style="color:var(--ss-accent);font-family:'JetBrains Mono',monospace;font-size:12px;">#深圳SundayService</code> + <code style="color:var(--wx-accent);font-family:'JetBrains Mono',monospace;font-size:12px;">#湾夏艺术中心</code></li>
+          <li data-m="✓">双 @ 齐全 · 双 LOGO 同框</li>
+          <li data-m="✓">关键词：合唱现场 · 现场乐队 · 负一楼 · 30 分钟 · 免费</li>
+          <li data-m="✓">团队露出：Mia · 周学仪 · 乐队 · 合唱团</li>
+          <li data-m="✓">发布前 24h 双方过稿</li>
+        </ul>
+      </div>
+      <div class="dd-col dont">
+        <div class="dd-head">DON'T · 不能做</div>
+        <ul>
+          <li data-m="✕">不要突出人数（"100 人"这类）</li>
+          <li data-m="✕">不要任何宗教元素（教堂 / 福音 / 礼拜 / Gospel）</li>
+          <li data-m="✕">不要说"致敬"、"中国版"、"翻版"（#KanyeWest 作为 tag 可带）</li>
+          <li data-m="✕">不要提"官方直播" · 本次无</li>
+          <li data-m="✕">不要提票务 / 付费字样 · 本次免费</li>
+          <li data-m="✕">不要把 6.21 塞进来 · 6.21 与湾夏无关</li>
+          <li data-m="✕">同一张现场图不两家都发</li>
+          <li data-m="✕">发布后不私自改话题 / @ · 口径同改</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="f-brand">SUNDAY SERVICE · SHENZHEN × 湾夏艺术中心</div>
+  <div class="f-meta">COPY DECK · V3 · 4.23 · INTERNAL</div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>SZSS × 湾夏艺术中心 · 5.1 快闪</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=Noto+Serif+SC:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --blue-deep:#0a1428;
+    --blue-800:#0f1d38;
+    --line:rgba(255,255,255,.10);
+    --white:#f5f5f5;
+    --off-white:#d8dce6;
+    --muted:#7e8a9e;
+    --ss-accent:#8ab8ff;
+    --wx-accent:#ffc98a;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--blue-deep);color:var(--white);font-family:'Inter','Noto Serif SC',sans-serif;-webkit-font-smoothing:antialiased;min-height:100vh;}
+  body{position:relative;overflow-x:hidden;display:flex;flex-direction:column;}
+  body::before{
+    content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+    background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence baseFrequency='.82' numOctaves='2' seed='11'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .05 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+    opacity:.3;mix-blend-mode:overlay;
+  }
+  body::after{
+    content:'';position:fixed;top:-20%;right:-10%;width:60%;height:50%;z-index:0;
+    background:radial-gradient(circle, rgba(138,184,255,.08) 0%, transparent 70%);
+    pointer-events:none;
+  }
+  .wrap{position:relative;z-index:1;max-width:1040px;margin:0 auto;padding:120px 40px 60px;flex:1;width:100%;}
+
+  .top{font-family:'Inter';font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--muted);margin-bottom:56px;display:flex;align-items:center;gap:14px;}
+  .top::after{content:'';flex:1;height:1px;background:var(--line);max-width:340px;}
+
+  h1{font-family:'Noto Serif SC',serif;font-weight:500;font-size:clamp(48px,7vw,96px);line-height:1;letter-spacing:-.015em;margin-bottom:32px;}
+  h1 em{font-style:normal;color:var(--ss-accent);font-weight:400;}
+  h1 i{font-style:normal;color:var(--wx-accent);font-weight:400;}
+
+  .sub{font-family:'Noto Serif SC',serif;font-weight:300;font-size:20px;color:var(--off-white);line-height:1.75;max-width:640px;margin-bottom:64px;}
+
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+
+  .card{
+    position:relative;
+    display:block;
+    padding:48px 44px 44px;
+    background:var(--blue-800);
+    border:1px solid var(--line);
+    border-radius:2px;
+    color:var(--white);
+    text-decoration:none;
+    transition:all .25s ease;
+    overflow:hidden;
+  }
+  .card:hover{background:#132145;border-color:rgba(255,255,255,.2);transform:translateY(-2px);}
+  .card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--ss-accent);}
+  .card.deck::before{background:var(--wx-accent);}
+  .card-num{font-family:'Inter';font-size:11px;letter-spacing:.3em;color:var(--muted);margin-bottom:24px;text-transform:uppercase;}
+  .card-t{font-family:'Noto Serif SC',serif;font-size:34px;font-weight:500;line-height:1.15;letter-spacing:-.01em;margin-bottom:16px;}
+  .card-d{font-size:14px;color:var(--off-white);line-height:1.8;margin-bottom:28px;font-family:'Noto Serif SC',sans-serif;font-weight:300;}
+  .card-meta{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:32px;}
+  .chip{display:inline-block;padding:4px 10px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:999px;font-size:11px;color:var(--muted);font-family:'Inter','Noto Serif SC',sans-serif;letter-spacing:.02em;}
+  .card-cta{display:flex;align-items:center;gap:12px;font-family:'Inter';font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--ss-accent);}
+  .card.deck .card-cta{color:var(--wx-accent);}
+  .card-cta .arrow{transition:transform .2s;}
+  .card:hover .card-cta .arrow{transform:translateX(4px);}
+
+  .foot{font-family:'Inter';font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:96px;padding-top:32px;border-top:1px solid var(--line);}
+
+  .foot-meta{display:flex;flex-wrap:wrap;gap:36px;color:var(--off-white);font-family:'Noto Serif SC',sans-serif;font-size:13px;letter-spacing:0;text-transform:none;margin-top:12px;}
+  .foot-meta b{color:var(--white);font-weight:500;}
+
+  @media (max-width:760px){
+    .wrap{padding:70px 22px 40px;}
+    .cards{grid-template-columns:1fr;}
+    h1{font-size:44px;}
+    .sub{font-size:17px;}
+    .card{padding:36px 28px 32px;}
+    .card-t{font-size:26px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">SZSS <em style="color:var(--muted);font-style:normal;margin:0 8px;">×</em> 湾夏艺术中心 · 5.1</div>
+  <h1>5.1 快闪<br/><em>作战资料</em> <i style="color:var(--muted);">·</i> <i>内部</i></h1>
+  <div class="sub">深圳 Sunday Service × 湾夏艺术中心 · 5.1 · 19:00 · 湾厦 1012 负一楼。<br/>两份内部文档。</div>
+
+  <div class="cards">
+    <a class="card" href="flashmob.html">
+      <div class="card-num">Document 01</div>
+      <div class="card-t">作战手册<br/>Flash Mob Plan</div>
+      <div class="card-d">分工 · 目标 · 时间轴 · 宣发节奏 · 当天执行 · 4.24 敲定清单。<br/>谁做什么、哪天做什么，一张纸看清。</div>
+      <div class="card-meta">
+        <span class="chip">分工 DIVISION</span>
+        <span class="chip">目标 VALUE</span>
+        <span class="chip">时间轴 TIMELINE</span>
+        <span class="chip">SHOWTIME</span>
+        <span class="chip">CHECKLIST</span>
+      </div>
+      <div class="card-cta">打开文档 <span class="arrow">→</span></div>
+    </a>
+
+    <a class="card deck" href="copy-deck.html">
+      <div class="card-num">Document 02</div>
+      <div class="card-t">宣发文案库<br/>Copy Deck</div>
+      <div class="card-d">5 天 · 2 方 · 6 平台 · 40+ 条文案与模板。<br/>按平台调过语气，直接复制就能发。</div>
+      <div class="card-meta">
+        <span class="chip">5 DAYS</span>
+        <span class="chip">SS × 湾夏</span>
+        <span class="chip">小红书 · 抖音 · 视频号</span>
+        <span class="chip">B站 · 公众号 · 朋友圈</span>
+        <span class="chip">SHOWTIME 实时</span>
+      </div>
+      <div class="card-cta">打开文档 <span class="arrow">→</span></div>
+    </a>
+  </div>
+
+  <div class="foot">
+    INTERNAL · COPY DECK + FLASH MOB PLAN
+    <div class="foot-meta">
+      <span><b>日期</b> 5.1 · 19:00</span>
+      <span><b>地点</b> 湾厦 1012 · 负一楼</span>
+      <span><b>形式</b> 合唱 + 现场乐队 · 30 分钟 · 免费</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>

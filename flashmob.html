@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SZSS × 湾夏艺术中心 · 5.1 快闪 · 宣发与执行分工方案</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --blue-deep: #0a1463;
+    --blue-mid: #1428a0;
+    --blue-light: #2d4fd9;
+    --white: #f7f5ee;
+    --off-white: #e8e4d6;
+    --muted: rgba(247,245,238,0.65);
+    --dim: rgba(247,245,238,0.4);
+    --line: rgba(247,245,238,0.15);
+    --ss-accent: #8ab8ff;
+    --wx-accent: #ffc98a;
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', 'Noto Serif SC', -apple-system, sans-serif;
+    background: var(--blue-deep);
+    color: var(--white);
+    min-height: 100vh;
+    line-height: 1.7;
+    position: relative;
+    overflow-x: hidden;
+  }
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 50% 40%, rgba(45,79,217,0.35) 0%, transparent 60%),
+      radial-gradient(ellipse at 20% 80%, rgba(20,40,160,0.4) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 20%, rgba(10,20,99,0.6) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.15 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+    opacity: 0.6;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+    z-index: 1;
+  }
+  .container { position: relative; z-index: 2; max-width: 1040px; margin: 0 auto; padding: 0 32px; }
+
+  /* Cover */
+  .cover {
+    min-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 70px 0 50px;
+  }
+  .cover-top { font-family: 'Inter'; font-size: 11px; letter-spacing: 3px; color: var(--muted); text-transform: uppercase; }
+  .cover-eyebrow {
+    font-family: 'Inter';
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: var(--off-white);
+    text-transform: uppercase;
+    margin-bottom: 32px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--line);
+    display: inline-block;
+  }
+  .cover-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: clamp(40px, 6.5vw, 76px);
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    margin-bottom: 28px;
+  }
+  .cover-title-en {
+    font-family: 'Inter';
+    font-size: clamp(14px, 1.6vw, 18px);
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: var(--muted);
+    margin-bottom: 48px;
+  }
+  .cover-lead {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--off-white);
+    max-width: 680px;
+    line-height: 1.9;
+  }
+  .cover-bottom {
+    display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap;
+    gap: 24px; font-family: 'Inter'; font-size: 12px; color: var(--muted);
+    letter-spacing: 1px; padding-top: 40px; border-top: 1px solid var(--line);
+  }
+  .cover-bottom strong { color: var(--white); font-weight: 500; letter-spacing: 2px; }
+  .cover-meta-grid { display: flex; gap: 40px; flex-wrap: wrap; }
+  .cover-meta-item { display: flex; flex-direction: column; gap: 4px; }
+  .cover-meta-label { font-size: 10px; letter-spacing: 2px; color: var(--dim); text-transform: uppercase; }
+  .cover-meta-value { font-size: 14px; color: var(--white); font-weight: 500; letter-spacing: 1px; }
+
+  /* Sections */
+  .section { padding: 70px 0; position: relative; }
+  .section + .section { border-top: 1px solid var(--line); }
+  .section-number {
+    font-family: 'Inter'; font-size: 11px; letter-spacing: 3px;
+    color: var(--muted); margin-bottom: 14px; text-transform: uppercase;
+  }
+  .section-title {
+    font-family: 'Noto Serif SC', serif; font-size: clamp(26px, 3.6vw, 36px);
+    font-weight: 700; margin-bottom: 10px; letter-spacing: -0.01em;
+  }
+  .section-sub {
+    font-family: 'Inter'; font-size: 13px; color: var(--muted);
+    letter-spacing: 1px; margin-bottom: 36px; padding-bottom: 20px; border-bottom: 1px solid var(--line);
+  }
+  .section h3 {
+    font-family: 'Noto Serif SC', serif; font-size: 19px; font-weight: 600;
+    margin: 32px 0 14px; color: var(--white);
+  }
+  .section h3:first-of-type { margin-top: 0; }
+  .section p {
+    font-size: 15px; color: var(--off-white); margin-bottom: 12px; line-height: 1.85;
+  }
+  .section p.lead { font-family: 'Noto Serif SC', serif; font-size: 16px; color: var(--white); }
+
+  /* Party tag */
+  .party { display: inline-block; font-family: 'Inter'; font-size: 10px; letter-spacing: 2px; font-weight: 600; padding: 3px 8px; border-radius: 2px; margin-right: 6px; vertical-align: middle; }
+  .party-ss { background: rgba(138,184,255,0.18); color: var(--ss-accent); border: 1px solid rgba(138,184,255,0.4); }
+  .party-wx { background: rgba(255,201,138,0.15); color: var(--wx-accent); border: 1px solid rgba(255,201,138,0.4); }
+  .party-both { background: rgba(247,245,238,0.15); color: var(--white); border: 1px solid rgba(247,245,238,0.4); }
+
+  /* Table */
+  .tbl {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 13px;
+  }
+  .tbl th, .tbl td {
+    padding: 13px 14px;
+    text-align: left;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+  .tbl th {
+    font-family: 'Inter'; font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--muted); font-weight: 500;
+    background: rgba(247,245,238,0.04);
+  }
+  .tbl td { color: var(--off-white); }
+  .tbl td strong { color: var(--white); font-weight: 500; }
+  .tbl tr.highlight td { background: rgba(247,245,238,0.06); }
+  .tbl tr.highlight td:first-child { border-left: 2px solid var(--white); }
+  .tbl .w-time { width: 130px; white-space: nowrap; }
+  .tbl .w-party { width: 120px; white-space: nowrap; }
+  .tbl .w-pic { width: 120px; white-space: nowrap; }
+
+  /* Grid cards */
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 18px; }
+  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 18px; }
+  @media (max-width: 720px) { .grid-2, .grid-3 { grid-template-columns: 1fr; } }
+  .card {
+    background: rgba(247,245,238,0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--line);
+    border-radius: 2px;
+    padding: 22px;
+  }
+  .card-party-ss { border-top: 2px solid var(--ss-accent); }
+  .card-party-wx { border-top: 2px solid var(--wx-accent); }
+  .card-label {
+    font-family: 'Inter'; font-size: 10px; letter-spacing: 2px;
+    color: var(--muted); text-transform: uppercase; margin-bottom: 10px;
+  }
+  .card-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 17px; font-weight: 600; margin-bottom: 6px; color: var(--white);
+  }
+  .card-text { font-size: 13px; color: var(--off-white); line-height: 1.8; }
+  .card-text ul { list-style: none; padding: 0; margin: 8px 0 0; }
+  .card-text li {
+    padding: 6px 0 6px 16px; position: relative; font-size: 13px; line-height: 1.7;
+  }
+  .card-text li::before {
+    content: ''; position: absolute; left: 0; top: 14px; width: 8px; height: 1px; background: var(--muted);
+  }
+
+  /* Key boxes */
+  .keybox {
+    background: rgba(247,245,238,0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--line);
+    border-left: 2px solid var(--white);
+    padding: 24px 28px;
+    margin: 22px 0;
+  }
+  .keybox-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 15px; font-weight: 600; color: var(--white); margin-bottom: 8px;
+  }
+  .keybox-text { font-size: 14px; color: var(--off-white); line-height: 1.9; }
+
+  /* Lists */
+  .list { list-style: none; margin: 14px 0; }
+  .list li {
+    position: relative; padding: 9px 0 9px 22px; font-size: 14px;
+    color: var(--off-white); border-bottom: 1px solid var(--line); line-height: 1.8;
+  }
+  .list li:last-child { border-bottom: none; }
+  .list li::before {
+    content: ''; position: absolute; left: 0; top: 20px; width: 10px; height: 1px; background: var(--muted);
+  }
+  .list li strong { color: var(--white); font-weight: 500; }
+
+  /* Footer */
+  .footer {
+    padding: 50px 0 40px; border-top: 1px solid var(--line); text-align: center;
+    font-size: 11px; letter-spacing: 2px; color: var(--muted);
+  }
+  .footer-brand {
+    font-family: 'Inter'; font-size: 13px; letter-spacing: 4px;
+    color: var(--white); margin-bottom: 8px;
+  }
+  .footer-contact { margin-top: 18px; color: var(--off-white); font-size: 13px; letter-spacing: 1px; }
+
+  @media (max-width: 720px) {
+    .container { padding: 0 24px; }
+    .section { padding: 54px 0; }
+    .cover { padding: 54px 0 40px; }
+  }
+  @media print {
+    body { background: #0a1463; }
+    body::before, body::after { display: none; }
+    .section { page-break-inside: avoid; }
+  }
+
+  /* Legend */
+  .legend {
+    display: flex; gap: 16px; flex-wrap: wrap; margin: 20px 0 28px;
+    font-size: 12px; color: var(--muted);
+  }
+  .legend-item { display: flex; align-items: center; gap: 8px; }
+
+  /* ============ POSTER-STYLE MODULES ============ */
+
+  /* Huge number blocks */
+  .big-block { padding: 90px 0; border-top: 1px solid var(--line); }
+  .big-eyebrow {
+    font-family: 'Inter'; font-size: 11px; letter-spacing: 4px;
+    color: var(--muted); text-transform: uppercase; margin-bottom: 18px;
+  }
+  .big-title {
+    font-family: 'Noto Serif SC', serif; font-size: clamp(32px, 5vw, 52px);
+    font-weight: 700; letter-spacing: -0.02em; margin-bottom: 8px; line-height: 1.15;
+  }
+  .big-sub {
+    font-family: 'Inter'; font-size: 13px; color: var(--dim);
+    letter-spacing: 2px; margin-bottom: 48px;
+  }
+
+  /* Split side-by-side */
+  .split { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+  @media (max-width: 720px) { .split { grid-template-columns: 1fr; } }
+  .split-card {
+    padding: 48px 36px;
+    border: 1px solid var(--line);
+    background: rgba(247,245,238,0.04);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    position: relative;
+    min-height: 340px;
+  }
+  .split-card.ss { border-top: 3px solid var(--ss-accent); }
+  .split-card.wx { border-top: 3px solid var(--wx-accent); }
+  .split-party {
+    font-family: 'Inter'; font-size: 11px; letter-spacing: 3px; font-weight: 600;
+    margin-bottom: 20px;
+  }
+  .split-party.ss { color: var(--ss-accent); }
+  .split-party.wx { color: var(--wx-accent); }
+  .split-role {
+    font-family: 'Noto Serif SC', serif;
+    font-size: clamp(26px, 3.2vw, 36px); font-weight: 700; line-height: 1.2;
+    margin-bottom: 28px; letter-spacing: -0.01em;
+  }
+  .split-list { list-style: none; }
+  .split-list li {
+    font-family: 'Noto Serif SC', serif; font-size: 18px; color: var(--white);
+    padding: 14px 0; border-bottom: 1px solid var(--line); letter-spacing: 0.02em;
+  }
+  .split-list li:last-child { border-bottom: none; }
+  .split-list li small {
+    display: block; font-family: 'Inter'; font-size: 11px; color: var(--muted);
+    letter-spacing: 2px; margin-top: 4px; text-transform: uppercase;
+  }
+
+  /* Horizontal timeline */
+  .timeline-h {
+    display: grid; grid-template-columns: repeat(5, 1fr); gap: 0;
+    border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+    margin: 0;
+  }
+  @media (max-width: 720px) { .timeline-h { grid-template-columns: 1fr; } }
+  .tl-node {
+    padding: 36px 20px; border-right: 1px solid var(--line); text-align: left;
+    position: relative;
+  }
+  .tl-node:last-child { border-right: none; }
+  @media (max-width: 720px) {
+    .tl-node { border-right: none; border-bottom: 1px solid var(--line); }
+    .tl-node:last-child { border-bottom: none; }
+  }
+  .tl-date {
+    font-family: 'Inter'; font-size: 28px; font-weight: 600;
+    color: var(--white); letter-spacing: -0.01em; line-height: 1;
+    margin-bottom: 4px;
+  }
+  .tl-weekday {
+    font-family: 'Inter'; font-size: 10px; letter-spacing: 3px; color: var(--dim);
+    text-transform: uppercase; margin-bottom: 20px;
+  }
+  .tl-stage {
+    font-family: 'Noto Serif SC', serif; font-size: 17px; font-weight: 600;
+    color: var(--white); margin-bottom: 8px; line-height: 1.3;
+  }
+  .tl-note {
+    font-size: 12px; color: var(--muted); line-height: 1.55;
+  }
+  .tl-node.highlight { background: rgba(138,184,255,0.06); }
+  .tl-node.highlight .tl-date { color: var(--ss-accent); }
+
+  /* Three key moments */
+  .moments { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0;
+    border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  @media (max-width: 720px) { .moments { grid-template-columns: 1fr; } }
+  .moment {
+    padding: 50px 28px; border-right: 1px solid var(--line);
+  }
+  .moment:last-child { border-right: none; }
+  @media (max-width: 720px) {
+    .moment { border-right: none; border-bottom: 1px solid var(--line); }
+    .moment:last-child { border-bottom: none; }
+  }
+  .moment-time {
+    font-family: 'Inter'; font-size: 48px; font-weight: 300;
+    color: var(--white); letter-spacing: -0.02em; line-height: 1;
+    margin-bottom: 18px;
+  }
+  .moment-what {
+    font-family: 'Noto Serif SC', serif; font-size: 20px; font-weight: 600;
+    color: var(--white); margin-bottom: 10px;
+  }
+  .moment-who {
+    font-size: 13px; color: var(--muted); line-height: 1.7;
+  }
+
+  /* Big checklist */
+  .big-checklist { list-style: none; counter-reset: chk; }
+  .big-checklist li {
+    counter-increment: chk;
+    display: flex; align-items: flex-start; gap: 24px;
+    padding: 24px 0; border-bottom: 1px solid var(--line);
+  }
+  .big-checklist li:last-child { border-bottom: none; }
+  .big-checklist li::before {
+    content: counter(chk, decimal-leading-zero);
+    font-family: 'Inter'; font-size: 13px; letter-spacing: 2px;
+    color: var(--dim); min-width: 32px; padding-top: 4px;
+  }
+  .big-checklist .chk-what {
+    font-family: 'Noto Serif SC', serif; font-size: 19px; font-weight: 600;
+    color: var(--white); line-height: 1.4; margin-bottom: 4px;
+  }
+  .big-checklist .chk-note {
+    font-size: 13px; color: var(--muted); line-height: 1.6;
+  }
+
+  /* Facts strip under hero */
+  .facts {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;
+    border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  }
+  @media (max-width: 720px) { .facts { grid-template-columns: repeat(2, 1fr); } }
+  .fact {
+    padding: 32px 20px; border-right: 1px solid var(--line);
+  }
+  .fact:last-child { border-right: none; }
+  @media (max-width: 720px) {
+    .fact:nth-child(2n) { border-right: none; }
+  }
+  .fact-label {
+    font-family: 'Inter'; font-size: 10px; letter-spacing: 3px;
+    color: var(--dim); text-transform: uppercase; margin-bottom: 12px;
+  }
+  .fact-value {
+    font-family: 'Noto Serif SC', serif; font-size: 20px;
+    color: var(--white); font-weight: 600; line-height: 1.3;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- ===================== COVER ===================== -->
+  <section class="cover">
+    <div class="cover-top">SZSS × 湾夏艺术中心 · 2026</div>
+    <div>
+      <div class="cover-eyebrow">宣发与执行分工方案 / WORKING DOC</div>
+      <h1 class="cover-title">5.1 快闪<br>协同作战手册</h1>
+      <div class="cover-title-en">FLASHMOB · SZSS × WANXIA · OPERATIONS PLAN</div>
+      <p class="cover-lead">
+        合作已敲定。<br>
+        4.24 双方汇报对齐，4.25–4.26 物料筹备，<br>
+        <strong>4.27 周日正式宣发启动，5 天冲刺到 5.1 现场。</strong>
+      </p>
+    </div>
+    <div class="cover-bottom">
+      <div class="cover-meta-grid">
+        <div class="cover-meta-item"><div class="cover-meta-label">Date</div><div class="cover-meta-value">2026.05.01 / 19:00</div></div>
+        <div class="cover-meta-item"><div class="cover-meta-label">Venue</div><div class="cover-meta-value">湾厦1012 · 负一楼</div></div>
+        <div class="cover-meta-item"><div class="cover-meta-label">Duration</div><div class="cover-meta-value">约 30 分钟</div></div>
+        <div class="cover-meta-item"><div class="cover-meta-label">Today</div><div class="cover-meta-value">2026.04.23 (T-8 天)</div></div>
+      </div>
+      <div><strong>OPERATIONS DOC</strong> · v1.0</div>
+    </div>
+  </section>
+
+  <!-- ===================== FACTS STRIP ===================== -->
+  <div class="facts">
+    <div class="fact"><div class="fact-label">When</div><div class="fact-value">5.1 · 19:00</div></div>
+    <div class="fact"><div class="fact-label">Where</div><div class="fact-value">湾厦1012 · 负一楼</div></div>
+    <div class="fact"><div class="fact-label">Duration</div><div class="fact-value">约 30 分钟</div></div>
+    <div class="fact"><div class="fact-label">Today</div><div class="fact-value">T-8 天</div></div>
+  </div>
+
+  <!-- ===================== 01 分工 · 左右两块 ===================== -->
+  <section class="big-block">
+    <div class="big-eyebrow">01 / DIVISION</div>
+    <h2 class="big-title">谁做什么</h2>
+    <div class="big-sub">一句话版</div>
+
+    <div class="split">
+      <div class="split-card ss">
+        <div class="split-party ss">SS · 深圳 SUNDAY SERVICE</div>
+        <div class="split-role">内容侧</div>
+        <ul class="split-list">
+          <li>演出内容与排练<small>Mia 指挥 · 周学仪和声</small></li>
+          <li>合唱团 + 乐队执行<small>合唱 30–50 人 · 乐队 4 人</small></li>
+          <li>宣发物料与文案<small>海报 · 视频 · 4 条预热</small></li>
+          <li>视频拍摄剪辑<small>BAB · 3–4 机位 · 现场快剪</small></li>
+          <li>合唱团签到 + 集合<small>5–8 名志愿者 · 人员核对 · 后台集结</small></li>
+        </ul>
+      </div>
+      <div class="split-card wx">
+        <div class="split-party wx">湾夏艺术中心</div>
+        <div class="split-role">场地侧</div>
+        <ul class="split-list">
+          <li>场地与电力保障<small>湾厦1012 负一楼 · 多路 220V</small></li>
+          <li>基础设备（如可提供）<small>音响 · 照明 · 桌椅</small></li>
+          <li>秩序 · 指引 · 动线<small>保安 2–3 人 · 物业 1 人 · 场内标识与引导</small></li>
+          <li>消防 / 噪声 / 物业报备<small>官方对外口径</small></li>
+          <li>品牌渠道联动<small>公众号 · 小红书 · 视频号</small></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 02 合作价值 + 目标 ===================== -->
+  <section class="big-block">
+    <div class="big-eyebrow">02 / VALUE & GOALS</div>
+    <h2 class="big-title">目标 + 价值</h2>
+    <div class="big-sub">量化目标 · 双方价值 · 素材原则</div>
+
+    <div class="moments">
+      <div class="moment">
+        <div class="moment-time">300+</div>
+        <div class="moment-what">现场到场</div>
+        <div class="moment-who">预计 300 人起<br>上限视场地决定</div>
+      </div>
+      <div class="moment">
+        <div class="moment-time">10w+</div>
+        <div class="moment-what">总曝光</div>
+        <div class="moment-who">双方矩阵联动<br>全平台同步发布</div>
+      </div>
+      <div class="moment">
+        <div class="moment-time">30 min</div>
+        <div class="moment-what">演出时长</div>
+        <div class="moment-who">19:00 – 19:30<br>5 首歌 · 一气呵成</div>
+      </div>
+    </div>
+
+    <div style="padding-top: 44px;">
+      <p style="font-family:'Noto Serif SC',serif;font-size:17px;line-height:1.9;color:var(--off-white);margin-bottom:20px;">
+        <strong style="color:var(--white);">双方投入</strong> —— 无现金往来，各自承担自己那部分。<br>
+        <span style="color:var(--ss-accent);font-weight:600;">SS</span>：演出内容 · 合唱团与乐队 · 宣发物料 · 现场执行团队 · 摄影剪辑<br>
+        <span style="color:var(--wx-accent);font-weight:600;">湾夏</span>：场地与电力 · 基础设施 · 保安与物业 · 现场摄影记录 · 品牌渠道联动
+      </p>
+      <p style="font-family:'Noto Serif SC',serif;font-size:17px;line-height:1.9;color:var(--off-white);margin-bottom:20px;">
+        <strong style="color:var(--white);">对湾夏的价值</strong> —— 空间被看到（湾厦1012 · 深圳青年音乐现场首秀）· 双品牌联名曝光 · 流量回流（SS 粉丝沉淀到湾夏账号）· 演出素材湾夏后续可独立二次传播。
+      </p>
+      <p style="font-family:'Noto Serif SC',serif;font-size:17px;line-height:1.9;color:var(--off-white);">
+        <strong style="color:var(--white);">素材原则</strong> —— 双方各自安排摄影摄像，机位互不干扰；发布前内容互通；同一张照片不两家都发；SS 侧重表演记录，湾夏侧重空间氛围，角度错位发布。
+      </p>
+    </div>
+  </section>
+
+  <!-- ===================== 03 时间轴 · 横向 5 节点 ===================== -->
+  <section class="big-block">
+    <div class="big-eyebrow">03 / TIMELINE</div>
+    <h2 class="big-title">8 天路径</h2>
+    <div class="big-sub">四个阶段 · 五个关键日</div>
+
+    <div class="timeline-h">
+      <div class="tl-node">
+        <div class="tl-date">4.24</div>
+        <div class="tl-weekday">周五</div>
+        <div class="tl-stage">汇报对齐</div>
+        <div class="tl-note">双方领导确认方案<br>对接人落实</div>
+      </div>
+      <div class="tl-node">
+        <div class="tl-date">4.25–26</div>
+        <div class="tl-weekday">周末</div>
+        <div class="tl-stage">物料筹备</div>
+        <div class="tl-note">海报 · 预热视频<br>不对外发布</div>
+      </div>
+      <div class="tl-node highlight">
+        <div class="tl-date">4.27</div>
+        <div class="tl-weekday">周日</div>
+        <div class="tl-stage">宣发启动</div>
+        <div class="tl-note">联名官宣海报<br>双矩阵同步</div>
+      </div>
+      <div class="tl-node">
+        <div class="tl-date">4.28–30</div>
+        <div class="tl-weekday">周一到周三</div>
+        <div class="tl-stage">冲刺 3 天</div>
+        <div class="tl-note">花絮 · 团队 · 倒计时<br>每日一波</div>
+      </div>
+      <div class="tl-node highlight">
+        <div class="tl-date">5.1</div>
+        <div class="tl-weekday">周四 · 19:00</div>
+        <div class="tl-stage">演出</div>
+        <div class="tl-note">双方各自拍摄<br>24h 快剪 + 二传播</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 03 宣发节奏 · 5 天冲刺 ===================== -->
+  <section class="big-block">
+    <div class="big-eyebrow">04 / COMMUNICATIONS</div>
+    <h2 class="big-title">宣发节奏</h2>
+    <div class="big-sub">4.27 启动 · 5 天每日一波 · SS + 湾夏 同步</div>
+
+    <div class="timeline-h">
+      <div class="tl-node highlight">
+        <div class="tl-date">4.27</div>
+        <div class="tl-weekday">Day 1 · 周日</div>
+        <div class="tl-stage">官宣海报</div>
+        <div class="tl-note">联名主视觉<br><span style="color:var(--ss-accent);">SS 全矩阵</span><br><span style="color:var(--wx-accent);">湾夏 公众号 + 小红书</span></div>
+      </div>
+      <div class="tl-node">
+        <div class="tl-date">4.28</div>
+        <div class="tl-weekday">Day 2 · 周一</div>
+        <div class="tl-stage">花絮 + 专稿</div>
+        <div class="tl-note">排练花絮 60s<br><span style="color:var(--wx-accent);">湾夏 公众号专稿首发</span></div>
+      </div>
+      <div class="tl-node">
+        <div class="tl-date">4.29</div>
+        <div class="tl-weekday">Day 3 · 周二</div>
+        <div class="tl-stage">团队 + 创意</div>
+        <div class="tl-note">6 人团队介绍<br>BAB bootleg 视频</div>
+      </div>
+      <div class="tl-node">
+        <div class="tl-date">4.30</div>
+        <div class="tl-weekday">Day 4 · 周三</div>
+        <div class="tl-stage">倒计时</div>
+        <div class="tl-note">「明天见」海报<br>双方同步刷屏</div>
+      </div>
+      <div class="tl-node highlight">
+        <div class="tl-date">5.1</div>
+        <div class="tl-weekday">演出日 · 周四</div>
+        <div class="tl-stage">现场快剪</div>
+        <div class="tl-note">现场 4–5 条短视频<br>21:00 首条快剪<br>5.2 完整视频 3min</div>
+      </div>
+    </div>
+
+    <p style="font-size:13px;color:var(--muted);margin-top:24px;text-align:center;">
+      铁律：双 LOGO + 双 @ · 统一话题 #深圳SundayService #湾夏艺术中心 · 发布前 24h 双方过稿
+    </p>
+  </section>
+
+  <!-- ===================== 04 5.1 当天关键时刻 ===================== -->
+  <section class="big-block">
+    <div class="big-eyebrow">05 / SHOWTIME</div>
+    <!-- section reordered: moments now after comms -->
+
+    <h2 class="big-title">5.1 当天</h2>
+    <div class="big-sub">六个关键时刻 · 其余细节在作战群</div>
+
+    <div class="moments">
+      <div class="moment">
+        <div class="moment-time">17:00</div>
+        <div class="moment-what">设备进场</div>
+        <div class="moment-who">SS 技术组铺线调音<br>湾夏 协助供电</div>
+      </div>
+      <div class="moment">
+        <div class="moment-time">17:30</div>
+        <div class="moment-what">合唱团签到</div>
+        <div class="moment-who">湾夏 布置场内指引标识<br>SS 志愿者合唱团签到</div>
+      </div>
+      <div class="moment">
+        <div class="moment-time">18:00</div>
+        <div class="moment-what">热声 + 走台</div>
+        <div class="moment-who">Mia 指挥热声<br>可赢调整走位</div>
+      </div>
+      <div class="moment">
+        <div class="moment-time">18:50</div>
+        <div class="moment-what">全部就位</div>
+        <div class="moment-who">双方摄影机位就位<br>湾夏 保安到位 · 观众入场</div>
+      </div>
+      <div class="moment">
+        <div class="moment-time">19:00</div>
+        <div class="moment-what">演出开始</div>
+        <div class="moment-who">Mia 指挥 · 双方同步拍摄<br>湾夏秩序 · 应急待命</div>
+      </div>
+      <div class="moment">
+        <div class="moment-time">21:00</div>
+        <div class="moment-what">首条快剪上线</div>
+        <div class="moment-who">BAB 加急剪辑<br>双方矩阵同步转发</div>
+      </div>
+    </div>
+
+    <p style="font-size:13px;color:var(--muted);margin-top:24px;text-align:center;">
+      决策分权：场地/物业/安全归 湾夏 · 内容/演出/团队归 SS · 宣发口径双方共同确认
+    </p>
+  </section>
+
+  <!-- ===================== 04 4.24 要敲定的事（精简版） ===================== -->
+  <section class="big-block">
+    <div class="big-eyebrow">06 / CHECKLIST</div>
+    <h2 class="big-title">4.24 敲定</h2>
+    <div class="big-sub">见面要落地的 8 件事</div>
+
+    <ul class="big-checklist">
+      <li>
+        <div>
+          <div class="chk-what">湾夏对接人</div>
+          <div class="chk-note">1 位决策权限人 · 姓名 · 电话 · 微信</div>
+        </div>
+      </li>
+      <li>
+        <div>
+          <div class="chk-what">场地细节</div>
+          <div class="chk-note">负一楼具体空间 · 面积 · 观众容纳上限 · 进出口 · 平面图</div>
+        </div>
+      </li>
+      <li>
+        <div>
+          <div class="chk-what">使用时间</div>
+          <div class="chk-note">14:00 进场 / 20:30 撤场 是否 OK · 前后缓冲时间</div>
+        </div>
+      </li>
+      <li>
+        <div>
+          <div class="chk-what">电力与音响</div>
+          <div class="chk-note">湾夏可提供什么（电源 / 照明 / 音响）· SS 需要补什么 · 4.25 前定</div>
+        </div>
+      </li>
+      <li>
+        <div>
+          <div class="chk-what">物业 + 消防报备</div>
+          <div class="chk-note">由湾夏对接 · SS 提供哪些材料 · 报备截止时间</div>
+        </div>
+      </li>
+      <li>
+        <div>
+          <div class="chk-what">品牌 + LOGO</div>
+          <div class="chk-note">双 LOGO 露出方式 · 湾夏 LOGO 4.25 前交 SS · 背板 / 横幅打样</div>
+        </div>
+      </li>
+      <li>
+        <div>
+          <div class="chk-what">宣发联动机制</div>
+          <div class="chk-note">湾夏公众号 / 小红书 / 视频号 · 发稿频率 · 过稿人 · 互动铁律</div>
+        </div>
+      </li>
+      <li>
+        <div>
+          <div class="chk-what">双方作战群</div>
+          <div class="chk-note">当天拉群 · 每日 22:00 同步 · 对接人 + 次级 3 人</div>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="footer-brand">SUNDAY SERVICE · SHENZHEN × 湾夏艺术中心</div>
+    <div>2026 · 5.1 快闪 · 宣发与执行分工方案 · v1.0</div>
+    <div class="footer-contact">
+      SS · Connie 赖树吉 &nbsp;|&nbsp; 微信 ConnieGOUP &nbsp;|&nbsp; 电话 16608850521
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
